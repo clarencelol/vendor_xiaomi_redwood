@@ -2,3 +2,10 @@ service secureelement-hal_1_2 /vendor/bin/hw/vendor.qti.secure_element@1.2-servi
     class hal
     user system
     group system
+    disabled
+
+on property:ro.boot.hwc=CN
+    enable secureelement-hal_1_2
+
+on property:ro.boot.hwc=GL
+    enable secureelement-hal_1_2
